@@ -2,6 +2,12 @@ import React from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { VscGraph } from "react-icons/vsc";
+import { CiBoxList } from "react-icons/ci"
+import { AiOutlineDatabase } from "react-icons/ai"
+import { AiOutlineComment } from "react-icons/ai"
+import { BsDiagram3 } from "react-icons/bs"
+import { SlDiamond } from "react-icons/sl"
+import { TfiWorld } from "react-icons/tfi"
 import style from "../src/styles/Home.module.css"
 type Props = {}
 
@@ -23,7 +29,7 @@ export default function Sidebar({ }: Props) {
                   <div className={`${currentPath === item.path ? `${style.btnAction}` : ``} ${item.color} text-white p-4 py-4 m-2 hover:bg-slate-200 flex`}>
                     <Link href={item.path}
                       className='rounded flex flex-row'>
-                      <div className="p-1 mr-2 scale-125">{item.icon}</div>
+                      <div className="p-1 mr-2 scale-125 text-white">{item.icon}</div>
                       <div className='font-sans font-normal'>{item.title}</div>
                     </Link>
                   </div>
@@ -48,36 +54,36 @@ export const Sidebardata = [
     title: "INTENTS",
     path: "/intents",
     color: "bg-sidecolor1-2",
-    icon: <VscGraph />,
+    icon: <CiBoxList />,
   },
   {
     title: "ENTITIES",
     path: "/entities",
     color: "bg-sidecolor1-3",
-    icon: <VscGraph />,
+    icon: <AiOutlineDatabase />,
   },
   {
     title: "CONVERSATION FLOW",
     path: "/conversationflow",
     color: "bg-sidecolor1-4",
-    icon: <VscGraph />,
+    icon: <AiOutlineComment />,
   },
   {
     title: "BUSINESS LOGIC",
     path: "/businesslogic",
     color: "bg-sidecolor1-5",
-    icon: <VscGraph />,
+    icon: <BsDiagram3 />,
   },
   {
     title: "RULE-BASED",
     path: "/rulebased",
     color: "bg-sidecolor1-6",
-    icon: <VscGraph />,
+    icon: <SlDiamond />,
   },
   {
     title: "NLP",
     path: "/nlp",
     color: "bg-sidecolor1-7",
-    icon: <VscGraph />,
+    icon: <TfiWorld />,
   }
 ];
