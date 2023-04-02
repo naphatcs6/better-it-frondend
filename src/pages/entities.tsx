@@ -64,6 +64,7 @@ export default function Entities({ data }: { data: Data[] }) {
   };
   return (
     <>
+      <title>Entities</title>
       <div className="bg-white m-5 rounded-lg shadow-lg">
         <div className='m-5 pt-4 text-2xl'>
           Phrase
